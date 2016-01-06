@@ -1,5 +1,5 @@
 1) Запускаем zookeper
-Запуск примера KafkaWordCount
+Запуск примера KafkaWordCount 
 
 
 
@@ -13,14 +13,23 @@ alfe@rt:~/mkdev/bigdata/kafka_2.11-0.8.2.2$ bin/kafka-server-start.sh config/ser
 
 3) Запускаем наш пример
 
+Официальный пример
 ```sh
 alfe@rt:~/mkdev/bigdata/compilation/spark-1.6.0$ bin/run-example org.apache.spark.examples.streaming.KafkaWordCount localhost:2181 test-consumer-group test 1
 ```
 
+Моё приложение
+
+```sh
+./bin/spark-submit --class  SimpleApp --master local[4] /home/alfe/mkdev/bigdata/simple_streaming_app/target/simple_streaming_app-1.0-SNAPSHOT-jar-with-dependencies.jar  localhost:2181 test-consumer-group test 1
+```
+
+
+
 4) Начинаем писать сообщения в topic `test`
 
 ```sh
-Calfe@rt:~/mkdev/bigdata/kafka_2.11-0.8.2.2$ bin/kafka-console-producer.sh --broker-list localhost:90 --topic test
+Calfe@rt:~/mkdev/bigdata/kafka_2.11-0.8.2.2$ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
 ```
 
 5) Эти сообщения будут видны в консоли,где мы запустили `bin/run-example...`
