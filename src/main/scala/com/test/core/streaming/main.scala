@@ -17,3 +17,4 @@ object SimpleApp {
     ssc.awaitTermination()
   }
 }
+  
