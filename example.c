@@ -20,9 +20,6 @@ void sigterm_handler(int sent_signal)
   }
 }
 
-
-
-
 int main()
 {
    printf("Starting process %d\n",getpid());
