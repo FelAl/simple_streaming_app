@@ -10,6 +10,11 @@ object SimpleApp {
   val Log = Logger.getLogger(SimpleApp.this.getClass().getSimpleName())
 
   def main(args: Array[String]) {
+    val mainThread = Thread.currentThread();
+    Runtime.getRuntime.addShutdownHook(new Thread() {override def run = {
+      Log.info("----CTRL-C HANDLING-----")
+      mainThread.join()
+    }})
     val Array(zkQuorum, group, topics, numThreads) = args
     val sparkConf = new SparkConf().setMaster("local[2]").setAppName("SimpleApp")
     val ssc = new StreamingContext(sparkConf, Seconds(1))
