@@ -22,6 +22,13 @@ val Log = Logger.getLogger(TestApp.this.getClass().getSimpleName())
 Log.info(“DEBUG info:” + zkQuorum)
 ```
 
+```sh
+...
+16/01/07 13:34:29 INFO SimpleApp$: DEBUG info:localhost:2181
+...
+```
+
+
 1. Корректно обрабатывать SIGTERM который пошлется тобой же, дорогой коллега, нажатием клавиш ctrl+c
 
 
