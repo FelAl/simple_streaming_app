@@ -1,0 +1,284 @@
+alfe@rt:~/mkdev/bigdata/compilation/spark-1.6.0$ ./bin/spark-submit --class  SimpleApp --master local[4] /home/alfe/mkdev/bigdata/simple_streaming_app/target/simple_streaming_app-1.0-SNAPSHOT-jar-with-dependencies.jar  localhost:2181 test-consumer-group test 1
+16/01/07 22:26:05 INFO SparkContext: Running Spark version 1.6.0
+16/01/07 22:26:05 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/07 22:26:05 WARN Utils: Your hostname, rt resolves to a loopback address: 127.0.1.1; using 192.168.0.100 instead (on interface wlan0)
+16/01/07 22:26:05 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+16/01/07 22:26:05 INFO SecurityManager: Changing view acls to: alfe
+16/01/07 22:26:05 INFO SecurityManager: Changing modify acls to: alfe
+16/01/07 22:26:05 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(alfe); users with modify permissions: Set(alfe)
+16/01/07 22:26:06 INFO Utils: Successfully started service 'sparkDriver' on port 34289.
+16/01/07 22:26:07 INFO Slf4jLogger: Slf4jLogger started
+16/01/07 22:26:07 INFO Remoting: Starting remoting
+16/01/07 22:26:07 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.0.100:59343]
+16/01/07 22:26:07 INFO Utils: Successfully started service 'sparkDriverActorSystem' on port 59343.
+16/01/07 22:26:07 INFO SparkEnv: Registering MapOutputTracker
+16/01/07 22:26:07 INFO SparkEnv: Registering BlockManagerMaster
+16/01/07 22:26:07 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-c65118d1-f31c-44fe-9009-1b7f6c8f0e79
+16/01/07 22:26:07 INFO MemoryStore: MemoryStore started with capacity 511.5 MB
+16/01/07 22:26:07 INFO SparkEnv: Registering OutputCommitCoordinator
+16/01/07 22:26:07 INFO Server: jetty-8.y.z-SNAPSHOT
+16/01/07 22:26:07 INFO AbstractConnector: Started SelectChannelConnector@0.0.0.0:4040
+16/01/07 22:26:07 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+16/01/07 22:26:07 INFO SparkUI: Started SparkUI at http://192.168.0.100:4040
+16/01/07 22:26:07 INFO HttpFileServer: HTTP File server directory is /tmp/spark-27b6deef-9500-49ab-8330-931b0d9c3947/httpd-671a3ce8-4e5f-4bc9-9680-faf679a0da34
+16/01/07 22:26:07 INFO HttpServer: Starting HTTP Server
+16/01/07 22:26:07 INFO Server: jetty-8.y.z-SNAPSHOT
+16/01/07 22:26:07 INFO AbstractConnector: Started SocketConnector@0.0.0.0:51004
+16/01/07 22:26:07 INFO Utils: Successfully started service 'HTTP file server' on port 51004.
+16/01/07 22:26:08 INFO SparkContext: Added JAR file:/home/alfe/mkdev/bigdata/simple_streaming_app/target/simple_streaming_app-1.0-SNAPSHOT-jar-with-dependencies.jar at http://192.168.0.100:51004/jars/simple_streaming_app-1.0-SNAPSHOT-jar-with-dependencies.jar with timestamp 1452194768181
+16/01/07 22:26:08 INFO Executor: Starting executor ID driver on host localhost
+16/01/07 22:26:08 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35975.
+16/01/07 22:26:08 INFO NettyBlockTransferService: Server created on 35975
+16/01/07 22:26:08 INFO BlockManagerMaster: Trying to register BlockManager
+16/01/07 22:26:08 INFO BlockManagerMasterEndpoint: Registering block manager localhost:35975 with 511.5 MB RAM, BlockManagerId(driver, localhost, 35975)
+16/01/07 22:26:08 INFO BlockManagerMaster: Registered BlockManager
+16/01/07 22:26:09 INFO SimpleApp$: DEBUG info:localhost:2181
+16/01/07 22:26:09 INFO ReceiverTracker: Starting 1 receivers
+16/01/07 22:26:09 INFO ReceiverTracker: ReceiverTracker started
+16/01/07 22:26:09 INFO ForEachDStream: metadataCleanupDelay = -1
+16/01/07 22:26:09 INFO FlatMappedDStream: metadataCleanupDelay = -1
+16/01/07 22:26:09 INFO MappedDStream: metadataCleanupDelay = -1
+16/01/07 22:26:09 INFO KafkaInputDStream: metadataCleanupDelay = -1
+16/01/07 22:26:09 INFO KafkaInputDStream: Slide time = 1000 ms
+16/01/07 22:26:09 INFO KafkaInputDStream: Storage level = StorageLevel(false, false, false, false, 1)
+16/01/07 22:26:09 INFO KafkaInputDStream: Checkpoint interval = null
+16/01/07 22:26:09 INFO KafkaInputDStream: Remember duration = 1000 ms
+16/01/07 22:26:09 INFO KafkaInputDStream: Initialized and validated org.apache.spark.streaming.kafka.KafkaInputDStream@2c542d61
+16/01/07 22:26:09 INFO MappedDStream: Slide time = 1000 ms
+16/01/07 22:26:09 INFO MappedDStream: Storage level = StorageLevel(false, false, false, false, 1)
+16/01/07 22:26:09 INFO MappedDStream: Checkpoint interval = null
+16/01/07 22:26:09 INFO MappedDStream: Remember duration = 1000 ms
+16/01/07 22:26:09 INFO MappedDStream: Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@4a6f5203
+16/01/07 22:26:09 INFO FlatMappedDStream: Slide time = 1000 ms
+16/01/07 22:26:09 INFO FlatMappedDStream: Storage level = StorageLevel(false, false, false, false, 1)
+16/01/07 22:26:09 INFO FlatMappedDStream: Checkpoint interval = null
+16/01/07 22:26:09 INFO FlatMappedDStream: Remember duration = 1000 ms
+16/01/07 22:26:09 INFO FlatMappedDStream: Initialized and validated org.apache.spark.streaming.dstream.FlatMappedDStream@52716922
+16/01/07 22:26:09 INFO ForEachDStream: Slide time = 1000 ms
+16/01/07 22:26:09 INFO ForEachDStream: Storage level = StorageLevel(false, false, false, false, 1)
+16/01/07 22:26:09 INFO ForEachDStream: Checkpoint interval = null
+16/01/07 22:26:09 INFO ForEachDStream: Remember duration = 1000 ms
+16/01/07 22:26:09 INFO ForEachDStream: Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@13ad6177
+16/01/07 22:26:09 INFO RecurringTimer: Started timer for JobGenerator at time 1452194770000
+16/01/07 22:26:09 INFO JobGenerator: Started JobGenerator at 1452194770000 ms
+16/01/07 22:26:09 INFO JobScheduler: Started JobScheduler
+16/01/07 22:26:09 INFO StreamingContext: StreamingContext started
+16/01/07 22:26:09 INFO ReceiverTracker: Receiver 0 started
+16/01/07 22:26:09 INFO DAGScheduler: Got job 0 (start at main.scala:27) with 1 output partitions
+16/01/07 22:26:09 INFO DAGScheduler: Final stage: ResultStage 0 (start at main.scala:27)
+16/01/07 22:26:09 INFO DAGScheduler: Parents of final stage: List()
+16/01/07 22:26:09 INFO DAGScheduler: Missing parents: List()
+16/01/07 22:26:09 INFO DAGScheduler: Submitting ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:588), which has no missing parents
+16/01/07 22:26:09 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 40.9 KB, free 40.9 KB)
+16/01/07 22:26:09 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 13.3 KB, free 54.2 KB)
+16/01/07 22:26:09 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:35975 (size: 13.3 KB, free: 511.5 MB)
+16/01/07 22:26:09 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1006
+16/01/07 22:26:09 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:588)
+16/01/07 22:26:09 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+16/01/07 22:26:09 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 3011 bytes)
+16/01/07 22:26:09 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+16/01/07 22:26:09 INFO Executor: Fetching http://192.168.0.100:51004/jars/simple_streaming_app-1.0-SNAPSHOT-jar-with-dependencies.jar with timestamp 1452194768181
+16/01/07 22:26:09 INFO Utils: Fetching http://192.168.0.100:51004/jars/simple_streaming_app-1.0-SNAPSHOT-jar-with-dependencies.jar to /tmp/spark-27b6deef-9500-49ab-8330-931b0d9c3947/userFiles-3dead73e-6d57-4142-9f2d-737ec67aec12/fetchFileTemp8676612986902760534.tmp
+16/01/07 22:26:10 INFO JobScheduler: Added jobs for time 1452194770000 ms
+16/01/07 22:26:10 INFO JobScheduler: Starting job streaming job 1452194770000 ms.0 from job set of time 1452194770000 ms
+-------------------------------------------
+Time: 1452194770000 ms
+-------------------------------------------
+
+16/01/07 22:26:10 INFO JobScheduler: Finished job streaming job 1452194770000 ms.0 from job set of time 1452194770000 ms
+16/01/07 22:26:10 INFO JobScheduler: Total delay: 0.119 s for time 1452194770000 ms (execution: 0.008 s)
+16/01/07 22:26:10 INFO ReceivedBlockTracker: Deleting batches ArrayBuffer()
+16/01/07 22:26:10 INFO InputInfoTracker: remove old batch metadata: 
+16/01/07 22:26:10 INFO Executor: Adding file:/tmp/spark-27b6deef-9500-49ab-8330-931b0d9c3947/userFiles-3dead73e-6d57-4142-9f2d-737ec67aec12/simple_streaming_app-1.0-SNAPSHOT-jar-with-dependencies.jar to class loader
+16/01/07 22:26:10 INFO RecurringTimer: Started timer for BlockGenerator at time 1452194770400
+16/01/07 22:26:10 INFO BlockGenerator: Started BlockGenerator
+16/01/07 22:26:10 INFO BlockGenerator: Started block pushing thread
+16/01/07 22:26:10 INFO ReceiverTracker: Registered receiver for stream 0 from 192.168.0.100:34289
+16/01/07 22:26:10 INFO ReceiverSupervisorImpl: Starting receiver
+16/01/07 22:26:10 INFO KafkaReceiver: Starting Kafka Consumer Stream with group: test-consumer-group
+16/01/07 22:26:10 INFO KafkaReceiver: Connecting to Zookeeper: localhost:2181
+16/01/07 22:26:10 INFO VerifiableProperties: Verifying properties
+16/01/07 22:26:10 INFO VerifiableProperties: Property group.id is overridden to test-consumer-group
+16/01/07 22:26:10 INFO VerifiableProperties: Property zookeeper.connect is overridden to localhost:2181
+16/01/07 22:26:10 INFO VerifiableProperties: Property zookeeper.connection.timeout.ms is overridden to 10000
+16/01/07 22:26:10 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], Connecting to zookeeper instance at localhost:2181
+16/01/07 22:26:10 INFO ZkEventThread: Starting ZkClient event thread.
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:zookeeper.version=3.4.5-1392090, built on 09/30/2012 17:52 GMT
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:host.name=rt
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:java.version=1.7.0_91
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:java.vendor=Oracle Corporation
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:java.class.path=/home/alfe/mkdev/bigdata/compilation/spark-1.6.0/conf/:/home/alfe/mkdev/bigdata/compilation/spark-1.6.0/assembly/target/scala-2.11/spark-assembly-1.6.0-hadoop2.4.0.jar:/home/alfe/mkdev/bigdata/compilation/spark-1.6.0/lib_managed/jars/datanucleus-core-3.2.10.jar:/home/alfe/mkdev/bigdata/compilation/spark-1.6.0/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/home/alfe/mkdev/bigdata/compilation/spark-1.6.0/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:java.library.path=/opt/oracle/instantclient_12_1:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:java.io.tmpdir=/tmp
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:java.compiler=<NA>
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:os.name=Linux
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:os.arch=amd64
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:os.version=3.16.0-30-generic
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:user.name=alfe
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:user.home=/home/alfe
+16/01/07 22:26:10 INFO ZooKeeper: Client environment:user.dir=/home/alfe/mkdev/bigdata/compilation/spark-1.6.0
+16/01/07 22:26:10 INFO ZooKeeper: Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@76b85f7e
+16/01/07 22:26:10 INFO ClientCnxn: Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+16/01/07 22:26:10 INFO ClientCnxn: Socket connection established to localhost/127.0.0.1:2181, initiating session
+16/01/07 22:26:11 INFO JobScheduler: Added jobs for time 1452194771000 ms
+16/01/07 22:26:11 INFO JobScheduler: Starting job streaming job 1452194771000 ms.0 from job set of time 1452194771000 ms
+-------------------------------------------
+Time: 1452194771000 ms
+-------------------------------------------
+
+16/01/07 22:26:11 INFO JobScheduler: Finished job streaming job 1452194771000 ms.0 from job set of time 1452194771000 ms
+16/01/07 22:26:11 INFO JobScheduler: Total delay: 0.020 s for time 1452194771000 ms (execution: 0.002 s)
+16/01/07 22:26:11 INFO MapPartitionsRDD: Removing RDD 3 from persistence list
+16/01/07 22:26:11 INFO MapPartitionsRDD: Removing RDD 2 from persistence list
+16/01/07 22:26:11 INFO BlockManager: Removing RDD 3
+16/01/07 22:26:11 INFO BlockRDD: Removing RDD 1 from persistence list
+16/01/07 22:26:11 INFO KafkaInputDStream: Removing blocks of RDD BlockRDD[1] at createStream at main.scala:17 of time 1452194771000 ms
+16/01/07 22:26:11 INFO BlockManager: Removing RDD 1
+16/01/07 22:26:11 INFO ReceivedBlockTracker: Deleting batches ArrayBuffer()
+16/01/07 22:26:11 INFO InputInfoTracker: remove old batch metadata: 
+16/01/07 22:26:11 INFO BlockManager: Removing RDD 2
+16/01/07 22:26:11 INFO ClientCnxn: Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x15217ccb0e90018, negotiated timeout = 6000
+16/01/07 22:26:11 INFO ZkClient: zookeeper state changed (SyncConnected)
+16/01/07 22:26:11 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], starting auto committer every 60000 ms
+16/01/07 22:26:11 WARN AppInfo$: Can't read Kafka version from MANIFEST.MF. Possible cause: java.lang.NullPointerException
+16/01/07 22:26:11 INFO KafkaReceiver: Connected to localhost:2181
+16/01/07 22:26:11 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], begin registering consumer test-consumer-group_rt-1452194770336-a45c7417 in ZK
+16/01/07 22:26:11 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], end registering consumer test-consumer-group_rt-1452194770336-a45c7417 in ZK
+16/01/07 22:26:11 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], starting watcher executor thread for consumer test-consumer-group_rt-1452194770336-a45c7417
+16/01/07 22:26:11 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], begin rebalancing consumer test-consumer-group_rt-1452194770336-a45c7417 try #0
+16/01/07 22:26:12 INFO JobScheduler: Starting job streaming job 1452194772000 ms.0 from job set of time 1452194772000 ms
+-------------------------------------------
+Time: 1452194772000 ms
+-------------------------------------------
+
+16/01/07 22:26:12 INFO JobScheduler: Finished job streaming job 1452194772000 ms.0 from job set of time 1452194772000 ms
+16/01/07 22:26:12 INFO JobScheduler: Total delay: 0.017 s for time 1452194772000 ms (execution: 0.001 s)
+16/01/07 22:26:12 INFO JobScheduler: Added jobs for time 1452194772000 ms
+16/01/07 22:26:12 INFO MapPartitionsRDD: Removing RDD 6 from persistence list
+16/01/07 22:26:12 INFO BlockManager: Removing RDD 6
+16/01/07 22:26:12 INFO MapPartitionsRDD: Removing RDD 5 from persistence list
+16/01/07 22:26:12 INFO BlockManager: Removing RDD 5
+16/01/07 22:26:12 INFO BlockRDD: Removing RDD 4 from persistence list
+16/01/07 22:26:12 INFO BlockManager: Removing RDD 4
+16/01/07 22:26:12 INFO KafkaInputDStream: Removing blocks of RDD BlockRDD[4] at createStream at main.scala:17 of time 1452194772000 ms
+16/01/07 22:26:12 INFO ReceivedBlockTracker: Deleting batches ArrayBuffer(1452194770000 ms)
+16/01/07 22:26:12 INFO InputInfoTracker: remove old batch metadata: 1452194770000 ms
+16/01/07 22:26:12 INFO ConsumerFetcherManager: [ConsumerFetcherManager-1452194771768] Stopping leader finder thread
+16/01/07 22:26:12 INFO ConsumerFetcherManager: [ConsumerFetcherManager-1452194771768] Stopping all fetchers
+16/01/07 22:26:12 INFO ConsumerFetcherManager: [ConsumerFetcherManager-1452194771768] All connections stopped
+16/01/07 22:26:12 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], Cleared all relevant queues for this fetcher
+16/01/07 22:26:12 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], Cleared the data chunks in all the consumer message iterators
+16/01/07 22:26:12 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], Committing all offsets after clearing the fetcher queues
+16/01/07 22:26:12 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], Releasing partition ownership
+^C16/01/07 22:26:12 INFO RangeAssignor: Consumer test-consumer-group_rt-1452194770336-a45c7417 rebalancing the following partitions: ArrayBuffer(0) for topic test with consumers: List(test-consumer-group_rt-1452194770336-a45c7417-0)
+16/01/07 22:26:12 INFO SimpleApp$: ----CTRL-C HANDLING-----
+16/01/07 22:26:12 INFO RangeAssignor: test-consumer-group_rt-1452194770336-a45c7417-0 attempting to claim partition 0
+16/01/07 22:26:12 INFO StreamingContext: Invoking stop(stopGracefully=false) from shutdown hook
+16/01/07 22:26:12 INFO ReceiverTracker: Sent stop signal to all 1 receivers
+16/01/07 22:26:12 INFO ReceiverSupervisorImpl: Received stop signal
+16/01/07 22:26:12 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], test-consumer-group_rt-1452194770336-a45c7417-0 successfully owned partition 0 for topic test
+16/01/07 22:26:12 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], Consumer test-consumer-group_rt-1452194770336-a45c7417 selected partitions : test:0: fetched offset = 35: consumed offset = 35
+16/01/07 22:26:12 INFO ConsumerFetcherManager$LeaderFinderThread: [test-consumer-group_rt-1452194770336-a45c7417-leader-finder-thread], Starting 
+16/01/07 22:26:12 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], end rebalancing consumer test-consumer-group_rt-1452194770336-a45c7417 try #0
+16/01/07 22:26:12 INFO ReceiverSupervisorImpl: Called receiver onStart
+16/01/07 22:26:12 INFO ReceiverSupervisorImpl: Waiting for receiver to be stopped
+16/01/07 22:26:12 INFO ReceiverSupervisorImpl: Stopping receiver with message: Stopped by driver: 
+16/01/07 22:26:12 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], ZKConsumerConnector shutting down
+16/01/07 22:26:12 INFO KafkaReceiver: Starting MessageHandler.
+16/01/07 22:26:12 INFO ConsumerFetcherManager: [ConsumerFetcherManager-1452194771768] Stopping leader finder thread
+16/01/07 22:26:12 INFO ConsumerFetcherManager$LeaderFinderThread: [test-consumer-group_rt-1452194770336-a45c7417-leader-finder-thread], Shutting down
+16/01/07 22:26:12 INFO VerifiableProperties: Verifying properties
+16/01/07 22:26:12 INFO VerifiableProperties: Property client.id is overridden to test-consumer-group
+16/01/07 22:26:12 INFO VerifiableProperties: Property metadata.broker.list is overridden to rt:9092
+16/01/07 22:26:12 INFO VerifiableProperties: Property request.timeout.ms is overridden to 30000
+16/01/07 22:26:12 INFO ClientUtils$: Fetching metadata from broker id:0,host:rt,port:9092 with correlation id 0 for 1 topic(s) Set(test)
+16/01/07 22:26:12 INFO SyncProducer: Connected to rt:9092 for producing
+16/01/07 22:26:12 INFO SyncProducer: Disconnecting from rt:9092
+16/01/07 22:26:12 WARN ClientUtils$: Fetching topic metadata with correlation id 0 for topics [Set(test)] from broker [id:0,host:rt,port:9092] failed
+java.nio.channels.ClosedChannelException
+  at kafka.network.BlockingChannel.send(BlockingChannel.scala:100)
+  at kafka.producer.SyncProducer.liftedTree1$1(SyncProducer.scala:73)
+  at kafka.producer.SyncProducer.kafka$producer$SyncProducer$$doSend(SyncProducer.scala:72)
+  at kafka.producer.SyncProducer.send(SyncProducer.scala:113)
+  at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:58)
+  at kafka.client.ClientUtils$.fetchTopicMetadata(ClientUtils.scala:93)
+  at kafka.consumer.ConsumerFetcherManager$LeaderFinderThread.doWork(ConsumerFetcherManager.scala:66)
+  at kafka.utils.ShutdownableThread.run(ShutdownableThread.scala:60)
+16/01/07 22:26:12 INFO SyncProducer: Disconnecting from rt:9092
+16/01/07 22:26:12 INFO ConsumerFetcherManager$LeaderFinderThread: [test-consumer-group_rt-1452194770336-a45c7417-leader-finder-thread], Stopped 
+16/01/07 22:26:12 INFO ConsumerFetcherManager$LeaderFinderThread: [test-consumer-group_rt-1452194770336-a45c7417-leader-finder-thread], Shutdown completed
+16/01/07 22:26:12 INFO ConsumerFetcherManager: [ConsumerFetcherManager-1452194771768] Stopping all fetchers
+16/01/07 22:26:12 INFO ConsumerFetcherManager: [ConsumerFetcherManager-1452194771768] All connections stopped
+16/01/07 22:26:12 INFO ZkEventThread: Terminate ZkClient event thread.
+16/01/07 22:26:12 INFO ZooKeeper: Session: 0x15217ccb0e90018 closed
+16/01/07 22:26:12 INFO ClientCnxn: EventThread shut down
+16/01/07 22:26:12 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], ZKConsumerConnector shutdown completed in 107 ms
+16/01/07 22:26:12 INFO ReceiverSupervisorImpl: Called receiver onStop
+16/01/07 22:26:12 INFO ReceiverSupervisorImpl: Deregistering receiver 0
+16/01/07 22:26:12 ERROR ReceiverTracker: Deregistered receiver for stream 0: Stopped by driver
+16/01/07 22:26:12 INFO ReceiverSupervisorImpl: Stopped receiver 0
+16/01/07 22:26:12 INFO BlockGenerator: Stopping BlockGenerator
+16/01/07 22:26:12 INFO RecurringTimer: Stopped timer for BlockGenerator after time 1452194772800
+16/01/07 22:26:12 INFO BlockGenerator: Waiting for block pushing thread to terminate
+16/01/07 22:26:12 INFO BlockGenerator: Pushing out the last 0 blocks
+16/01/07 22:26:12 INFO BlockGenerator: Stopped block pushing thread
+16/01/07 22:26:12 INFO BlockGenerator: Stopped BlockGenerator
+16/01/07 22:26:12 INFO ReceiverSupervisorImpl: Stopped receiver without error
+16/01/07 22:26:12 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 915 bytes result sent to driver
+16/01/07 22:26:12 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 3225 ms on localhost (1/1)
+16/01/07 22:26:12 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+16/01/07 22:26:12 INFO DAGScheduler: ResultStage 0 (start at main.scala:27) finished in 3.248 s
+16/01/07 22:26:12 INFO ReceiverTracker: All of the receivers have deregistered successfully
+16/01/07 22:26:12 INFO ReceiverTracker: ReceiverTracker stopped
+16/01/07 22:26:12 INFO JobGenerator: Stopping JobGenerator immediately
+16/01/07 22:26:12 INFO RecurringTimer: Stopped timer for JobGenerator after time 1452194772000
+16/01/07 22:26:12 INFO JobGenerator: Stopped JobGenerator
+16/01/07 22:26:12 INFO JobScheduler: Stopped JobScheduler
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/streaming,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/streaming/batch,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/static/streaming,null}
+16/01/07 22:26:12 INFO StreamingContext: StreamingContext stopped successfully
+16/01/07 22:26:12 INFO ZookeeperConsumerConnector: [test-consumer-group_rt-1452194770336-a45c7417], stopping watcher executor thread for consumer test-consumer-group_rt-1452194770336-a45c7417
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/streaming/batch/json,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/streaming/json,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/api,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/static,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+16/01/07 22:26:12 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs,null}
+16/01/07 22:26:12 INFO SparkUI: Stopped Spark web UI at http://192.168.0.100:4040
+16/01/07 22:26:12 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+16/01/07 22:26:12 INFO MemoryStore: MemoryStore cleared
+16/01/07 22:26:12 INFO BlockManager: BlockManager stopped
+16/01/07 22:26:12 INFO BlockManagerMaster: BlockManagerMaster stopped
+16/01/07 22:26:12 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+16/01/07 22:26:12 INFO RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.
+16/01/07 22:26:12 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
+16/01/07 22:26:13 INFO SparkContext: Successfully stopped SparkContext
+16/01/07 22:26:13 WARN StreamingContext: StreamingContext has already been stopped
+16/01/07 22:26:13 INFO ShutdownHookManager: Shutdown hook called
+16/01/07 22:26:13 INFO ShutdownHookManager: Deleting directory /tmp/spark-27b6deef-9500-49ab-8330-931b0d9c3947
+16/01/07 22:26:13 INFO RemoteActorRefProvider$RemotingTerminator: Remoting shut down.
+16/01/07 22:26:13 INFO ShutdownHookManager: Deleting directory /tmp/spark-27b6deef-9500-49ab-8330-931b0d9c3947/httpd-671a3ce8-4e5f-4bc9-9680-faf679a0da34
+alfe@rt:~/mkdev/bigdata/compilation/spark-1.6.0$ 
