@@ -12,18 +12,16 @@ import org.apache.hadoop.mapred.lib.MultipleTextOutputFormat
 object SimpleApp {
   val Log = Logger.getLogger(SimpleApp.this.getClass().getSimpleName())
 
-  def write(uri: String, filePath: String, data: Array[Byte]) = {
-    System.setProperty("HADOOP_USER_NAME", "Alexander")
-    val path = new Path(filePath)
-    val conf = new Configuration()
-    conf.set("fs.defaultFS", uri)
-    val fs = FileSystem.get(conf)
-    val os = fs.create(path)
-    os.write(data)
-    fs.close()
-  }
-
-
+  // def write(uri: String, filePath: String, data: Array[Byte]) = {
+  //   System.setProperty("HADOOP_USER_NAME", "Alexander")
+  //   val path = new Path(filePath)
+  //   val conf = new Configuration()
+  //   conf.set("fs.defaultFS", uri)
+  //   val fs = FileSystem.get(conf)
+  //   val os = fs.create(path)
+  //   os.write(data)
+  //   fs.close()
+  // }
 
   def main(args: Array[String]) {
     val Array(zkQuorum, group, topics, numThreads) = args
@@ -34,8 +32,10 @@ object SimpleApp {
     stream.foreachRDD( rdd => 
       if(rdd.isEmpty() == false){
         rdd.foreach(x => println(x._2 + "olololol"))
-        // works 
-        rdd.saveAsHadoopFile("hdfs://0.0.0.0:9000/rdd.txt", classOf[String], classOf[String], classOf[MultipleTextOutputFormat[Any,Any]])
+        // works without append
+        rdd.saveAsHadoopFile("hdfs://0.0.0.0:9000/rdd.txt", classOf[String], classOf[String], 
+          classOf[MultipleTextOutputFormat[Any,Any]])
+        // doesn't work
         // rdd.saveAsSequenceFile("hdfs://0.0.0.0:9000/")
       }
     )
