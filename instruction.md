@@ -21,7 +21,7 @@ alfe@rt:~/mkdev/bigdata/compilation/spark-1.6.0$ bin/run-example org.apache.spar
 Моё приложение
 
 ```sh
-./bin/spark-submit --class  SimpleApp --master local[4] /home/alfe/mkdev/bigdata/simple_streaming_app/target/simple_streaming_app-1.0-SNAPSHOT.jar  localhost:2181 test-consumer-group test 1
+./bin/spark-submit --class  SimpleApp --master local[4] /home/af/mkdev/bigdata/simple_streaming_app/target/scala-2.11/SimpleApp-assembly-1.0.jar  localhost:2181 test-consumer-group test 1
 ```
 
 
