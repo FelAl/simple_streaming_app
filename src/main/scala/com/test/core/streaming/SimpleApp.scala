@@ -25,6 +25,10 @@ object SimpleApp {
   // }
 
   def main(args: Array[String]) {
+    for ( x <- args ) {
+         println( x )
+      }
+    println("=======")
     val Array(zkQuorum, group, topics, numThreads) = args
     val sparkConf = new SparkConf().setMaster("local[2]").setAppName("SimpleApp")
     val ssc = new StreamingContext(sparkConf, Seconds(1))

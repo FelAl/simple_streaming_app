@@ -99,3 +99,5 @@ https://community.hortonworks.com/questions/54802/save-kafka-spark-streaming-mes
 
 +++++++
 http://stackoverflow.com/questions/29383578/how-to-convert-rdd-object-to-dataframe-in-spark
+
+ mkdir -p src/{main,test}/scala/collaboration
