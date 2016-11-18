@@ -40,6 +40,19 @@ assemblyMergeStrategy in assembly := {
 }
 
 
+scalacOptions ++= Seq(
+  // "-target:jvm-1.8",
+  "-encoding", "UTF-8",
+  "-unchecked",
+  "-deprecation",
+  "-Xfuture",
+  "-Yno-adapted-args",
+  "-Ywarn-dead-code",
+  "-Ywarn-numeric-widen",
+  "-Ywarn-value-discard",
+  "-Ywarn-unused"
+)
+
 
 // mainClass in assembly := Some("SimpleApp")
 
