@@ -25,6 +25,3 @@ bin/kafka-server-start.sh config/server.properties &> /dev/null &
 while true;     
   do sleep 1; 
 done
-
-echo "end"
-
