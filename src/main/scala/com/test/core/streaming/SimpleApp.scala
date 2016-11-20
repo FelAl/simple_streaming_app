@@ -26,27 +26,10 @@ object SimpleApp {
     stream.foreachRDD( rdd => {
       if(rdd.isEmpty() == false){
         import sqlContext.implicits._
-        rdd.foreach(x => println(x._2 + "olololol"))
-        println(rdd.getClass)
-        val dataframe = rdd.toDF()
-        println(dataframe.getClass)
-        dataframe.show()
-        println("=====")
-        dataframe.printSchema()
-        println("=====")
-        val newdf = dataframe.drop("_1")
-        newdf.show()
-        newdf.printSchema()
-        println("=====")
-        // println(dataframe._1)
-        // println(dataframe._2)
-        println("===writing to hdfs")
+        rdd.foreach(x => println(x._2 + " processed"))
+        val dataframe = rdd.toDF()        
+        val newdf = dataframe.drop("_1")        
         newdf.write.mode("append").text("hdfs://0.0.0.0:9000/test2.txt")
-        // works without append
-        // rdd.saveAsHadoopFile("hdfs://0.0.0.0:9000/rdd.txt", classOf[String], classOf[String], 
-        //   classOf[MultipleTextOutputFormat[Any,Any]])
-        // doesn't work
-        // rdd.saveAsSequenceFile("hdfs://0.0.0.0:9000/")
       }  
     })
     Log.warn("DEBUG info:" + zkQuorum)
