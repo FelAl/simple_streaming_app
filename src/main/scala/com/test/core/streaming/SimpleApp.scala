@@ -21,7 +21,6 @@ object SimpleApp {
     val topicMap = topics.split(",").map((_, 1)).toMap
     val stream = KafkaUtils.createStream(ssc, zkQuorum, group, topicMap)
     val sqlContext = new org.apache.spark.sql.SQLContext(sc)
-    println("=======")
     println(stream.getClass)
     stream.foreachRDD( rdd => {
       if(rdd.isEmpty() == false){
